@@ -12,7 +12,12 @@
         .footer { background: #212529; color: white; text-align: center; padding: 20px 0; }
     </style>
     <script>
-        function showSection(sectionId) {document.querySelectorAll('.content-section').forEach(section => {section.style.display = 'none';});document.getElementById(sectionId).style.display = 'block';}
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
     </script>
 </head>
 <body>

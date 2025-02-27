@@ -11,60 +11,74 @@
         .section { padding: 50px 0; }
         .footer { background: #212529; color: white; text-align: center; padding: 20px 0; }
     </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header class="hero">
-    <img src="https://raw.githubusercontent.com/your-username/your-repository/main/images/my-image.jpg" 
-         alt="Profile Picture" style="width:150px; border-radius:50%;">
-    <h1>Kim Zoilo Felix Magnaye</h1>
-    <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
-</header>
+        <h1>KIM ZOILO FELIX G. MAGNAYE</h1>
+        <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
+        <nav>
+            <button onclick="showSection('about')">About Me</button>
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('experience')">Work Experience</button>
+            <button onclick="showSection('projects')">Projects</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </nav>
+    </header>
 
-    <section class="container section" id="about">
+    <section class="container section content-section" id="about" style="display: block;">
         <h2>About Me</h2>
-        <p>To be part of a dynamic environment where I can apply and impart knowledge and skills. To fully optimize my values to become a valuable and competent asset of the company.</p>
+        <p>I am a skilled BIM Technologist with expertise in structural modeling, shop drawings, and 4D/5D simulations. Passionate about integrating digital solutions in construction.</p>
     </section>
 
-    <section class="container section" id="skills">
+    <section class="container section content-section" id="skills" style="display: none;">
         <h2>Skills</h2>
         <ul>
-            <li>AutoCAD / 2D Drafting</li>
-            <li>Revit / 3D Drafting and Modeling</li>
-            <li>BIM 360/ 3D Coordination</li>
-            <li>Navisworks / 3D Clash Detection</li>
-            <li>Synchro / 3D Scheduling</li>
-            <li>Microsoft Project / Project Management Scheduling</li>
-            <li>Microsoft Excel / Construction Project Estimating and Scheduling</li>
+            <li>Revit (Structural Modeling & Shop Drawings)</li>
+            <li>BIM 360 Collaboration</li>
+            <li>Navisworks Coordination</li>
+            <li>4D & 5D BIM Visualization</li>
+            <li>OBC & NBC Code Compliance</li>
         </ul>
     </section>
 
-    <section class="container section" id="work-experience">
-        <h2>Work Experience</h2>
+    <section class="container section content-section" id="experience" style="display: none;">
+        <h2>WORK EXPERIENCE</h2>
         <ul>
-            <li><strong>BIM Modeler, Cunliffe and Associates – Ottawa, ON (June 2024 - December 2024)</strong>
-                <ul>
-                    <li>Provided detailed Revit models and Construction drawings for structural projects.</li>
-                    <li>Prepared drawings for permit, tender, and construction submissions.</li>
-                    <li>Collaborated with Senior BIM Modeler and Engineers to ensure high-quality and efficient production of drawings.</li>
-                </ul>
-            </li>
-            <li><strong>Assistant BIM Coordinator, China State Const. Engineering Corp. Ltd. - Singapore (July 2022 - November 2022)</strong>
-                <ul>
-                    <li>Established and monitored the modeling environment setup.</li>
-                    <li>Prepared a model schedule aligned with the site schedule, ensuring it follows the project's critical path.</li>
-                </ul>
-            </li>
-            <li><strong>BIM Modeler (Structure), Woh Hup (Private) Limited - Singapore (December 2016 - April 2022)</strong>
-                <ul>
-                    <li>Developed preliminary structural Revit models to serve as references for construction drawings.</li>
-                    <li>Created detailed piling plans using Revit software, enabling easier visualization and implementation on-site.</li>
-                </ul>
-            </li>
+        <h3>BIM Modeler - June,2024 to December,2024</h3>
+        <h3>Cunliffe and Associates - Ottawa,ON</h3>   
         </ul>
+            <ul>
+            <li>Provided detailed Revit models and Construction drawings for structural projects.</li>
+            <li>Prepare drawings for permit, tender, and construction submissions.</li>
+            <li>Collaborating with Senior BIM Modeler and Engineers to ensure highquality and efficient production of drawings.</li>
+            <li>Ensuring models and drawings meet company standards and client specifications.</li>
+            <li>Developing and modifying Revit families based on project complexity to streamline workflows and improve efficiency within the project timeline.</li>
+            </ul>
+        <ul>
+        <h3>Assistant BIM Coordinator, July,2022 to November,2022</h3>
+        <h3>China State Const. Engineering Corp. Ltd. - Singapore</h3>   
+        </ul>
+            <ul>
+            <li>Establish and monitor the modeling environment setup.</li>
+            <li>Prepare a model schedule aligned with the site schedule, ensuring it follows the project's critical path.</li>
+            <li>Collaborate with interdisciplinary teams to resolve clashes and design issues.</li>
+            <li>Oversee the scope of work and schedules of BIM modelers.</li>
+            <li>Work closely with the project team to address issues related to site progress.</li>
+            <li>Develop standard templates for structural shop drawings, such as Concrete Body Plans.</li>
+            </ul>
     </section>
 
-    <section class="container section" id="projects">
+    <section class="container section content-section" id="projects" style="display: none;">
         <h2>Projects</h2>
+        <p>Here are some projects I have worked on:</p>
         <ul>
             <li>High-Rise Structural Modeling</li>
             <li>Piling Plans & Reinforcement Detailing</li>
@@ -72,16 +86,14 @@
         </ul>
     </section>
 
-    <section class="container section" id="contact">
+    <section class="container section content-section" id="contact" style="display: none;">
         <h2>Contact</h2>
-        <p>Address: Ottawa, ON K2J 7B5</p>
-        <p>Phone: 613-263-9677</p>
-        <p>Email: <a href="mailto:kimzfmagnaye@yahoo.com">kimzfmagnaye@yahoo.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/kim-zoilo-felix-magnaye-4831aa66/">Kim Zoilo Felix Magnaye</a></p>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: <a href="#">https://www.linkedin.com/in/kim-zoilo-felix-magnaye-4831aa66/</a></p>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Kim Zoilo Felix Magnaye | BIM Technologist</p>
+        <p>&copy; 2025 Your Name | BIM Technologist</p>
     </footer>
 </body>
 </html>

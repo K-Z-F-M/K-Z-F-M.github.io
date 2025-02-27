@@ -13,7 +13,7 @@
     </style>
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
+            document.querySelectorAll('.content-section').forEach(section => {
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
@@ -33,12 +33,12 @@
         </nav>
     </header>
 
-    <section class="container section" id="about" style="display:block;">
+    <section class="container section content-section" id="about" style="display: block;">
         <h2>About Me</h2>
         <p>I am a skilled BIM Technologist with expertise in structural modeling, shop drawings, and 4D/5D simulations. Passionate about integrating digital solutions in construction.</p>
     </section>
 
-    <section class="container section" id="skills" style="display:none;">
+    <section class="container section content-section" id="skills" style="display: none;">
         <h2>Skills</h2>
         <ul>
             <li>Revit (Structural Modeling & Shop Drawings)</li>
@@ -49,16 +49,13 @@
         </ul>
     </section>
 
-    <section class="container section" id="experience" style="display:none;">
+    <section class="container section content-section" id="experience" style="display: none;">
         <h2>Work Experience</h2>
-        <ul>
-            <li>Company A - BIM Technologist (Year - Year)</li>
-            <li>Company B - Structural BIM Modeler (Year - Year)</li>
-            <li>Company C - Drafting Specialist (Year - Year)</li>
-        </ul>
+        <p>Company Name - Position</p>
+        <p>Responsibilities and key contributions in previous roles.</p>
     </section>
 
-    <section class="container section" id="projects" style="display:none;">
+    <section class="container section content-section" id="projects" style="display: none;">
         <h2>Projects</h2>
         <p>Here are some projects I have worked on:</p>
         <ul>
@@ -68,7 +65,7 @@
         </ul>
     </section>
 
-    <section class="container section" id="contact" style="display:none;">
+    <section class="container section content-section" id="contact" style="display: none;">
         <h2>Contact</h2>
         <p>Email: your.email@example.com</p>
         <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>

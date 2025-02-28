@@ -91,15 +91,41 @@
         </ul>
     </section>
 
-    <section class="container section content-section" id="projects" style="display: none;">
-        <h2>Projects</h2>
-        <p>Here are some projects I have worked on:</p>
-        <ul>
-            <li>High-Rise Structural Modeling</li>
-            <li>Piling Plans & Reinforcement Detailing</li>
-            <li>MEPF Coordination in Large-Scale Buildings</li>
-        </ul>
-    </section>
+    <section class="container section" id="projects">
+    <h2>Projects</h2>
+    <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/project1.jpg" class="d-block w-100" alt="High-Rise Structural Modeling">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>High-Rise Structural Modeling</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/project2.jpg" class="d-block w-100" alt="Piling Plans & Reinforcement Detailing">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Piling Plans & Reinforcement Detailing</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/project3.jpg" class="d-block w-100" alt="MEPF Coordination">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>MEPF Coordination in Large-Scale Buildings</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
 
     <section class="container section content-section" id="contact" style="display: none;">
         <h2>Contact</h2>

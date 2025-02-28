@@ -26,6 +26,14 @@
         margin-bottom: 15px; /* Adds spacing below the image */
         }
 
+         .d-block w-100 {
+        width: 550px; /* Adjust size as needed */
+        height: 550px;
+        border: 50%; /* Makes it Rectangle */
+        object-fit: cover; /* Ensures the image is properly cropped */
+        margin-bottom: 15px; /* Adds spacing below the image */
+        }
+        
     </style>
     <script>
         function showSection(sectionId) {
@@ -91,7 +99,7 @@
         </ul>
     </section>
 
-    <section class="container section" id="projects">
+    <section class="container section" id="projects" style="display: block;">
     <h2>Projects</h2>
     <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">

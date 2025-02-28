@@ -17,6 +17,15 @@
         .footer { background: #212529; color: white; text-align: center; padding: 20px 0; }
         nav button { margin: 5px; padding: 10px 20px; border: none; background: #007bff; color: white; border-radius: 5px; }
         nav button:hover { background: #0056b3; }
+
+        .profile-pic {
+        width: 150px; /* Adjust size as needed */
+        height: 150px;
+        border-radius: 50%; /* Makes it round */
+        object-fit: cover; /* Ensures the image is properly cropped */
+        margin-bottom: 15px; /* Adds spacing below the image */
+        }
+
     </style>
     <script>
         function showSection(sectionId) {
@@ -42,6 +51,7 @@
 
     <section class="container section content-section" id="about" style="display: block;">
         <h2>About Me</h2>
+        <img src="Profile Pic.jpg" alt="Kim Zoilo Felix Magnaye" class="profile-pic">
         <p>I am a skilled BIM Technologist with expertise in structural modeling, shop drawings, and 4D/5D simulations. Passionate about integrating digital solutions in construction.</p>
     </section>
 

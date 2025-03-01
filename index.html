@@ -31,6 +31,12 @@
     height: auto;
         }
 
+         .logo-button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        
         :root {
     --border-size: 5px;
         }
@@ -56,15 +62,25 @@
             });
             document.getElementById(sectionId).style.display = 'block';
         }
+
+        function logoClicked() {
+            alert("Logo Clicked!");
+            // You can replace the alert with another action, like redirecting:
+            // window.location.href = "https://yourwebsite.com";
+        }        
     </script>
 </head>
 <body>
     <header class="hero">
         <img src="02 LOGO/KZFM LOGO.jpg" alt="My Logo" width="150">
+
+        <button class="logo-button" onclick="logoClicked()">
+        <img src="02 LOGO/KZFM LOGO.jpg" alt="My Logo" width="150">
+    </button>
+        
         <h1>KIM ZOILO FELIX G. MAGNAYE</h1>
         <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
         <nav>
-            <button onclick="showSection('Main Page')">KZFM LOGO.jpg</button>
             <button onclick="showSection('about')">About Me</button>
             <button onclick="showSection('Education')">Education</button>
             <button onclick="showSection('skills')">Skills</button>
@@ -73,7 +89,7 @@
             <button onclick="showSection('contact')">Contact</button>
         </nav>
     </header>
-
+    
     <section class="container section content-section" id="about" style="display: block;">
         <h2>About Me</h2>
         <img src="01 Profile Pic/Profile Pic.jpg" alt="Kim Zoilo Felix Magnaye" class="profile-pic">

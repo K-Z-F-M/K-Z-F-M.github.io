@@ -1,0 +1,53 @@
+import React, { useState } from "react";
+
+export default function App() {
+  const [length, setLength] = useState("");
+  const [width, setWidth] = useState("");
+  const [area, setArea] = useState(null);
+  const [perimeter, setPerimeter] = useState(null);
+
+  const calculate = () => {
+    const l = parseFloat(length);
+    const w = parseFloat(width);
+    if (!isNaN(l) && !isNaN(w)) {
+      setArea(l * w);
+      setPerimeter(2 * (l + w));
+    } else {
+      alert("Please enter valid numbers!");
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+      <h1 className="text-2xl font-bold mb-4">Area & Perimeter Calculator</h1>
+      <div className="bg-white p-6 rounded-lg shadow-md w-80">
+        <input
+          type="number"
+          placeholder="Enter length"
+          className="border p-2 w-full mb-2 rounded"
+          value={length}
+          onChange={(e) => setLength(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Enter width"
+          className="border p-2 w-full mb-2 rounded"
+          value={width}
+          onChange={(e) => setWidth(e.target.value)}
+        />
+        <button
+          onClick={calculate}
+          className="bg-blue-500 text-white px-4 py-2 rounded w-full mt-2 hover:bg-blue-700"
+        >
+          Calculate
+        </button>
+        {area !== null && (
+          <div className="mt-4 text-center">
+            <p>Area: <strong>{area}</strong></p>
+            <p>Perimeter: <strong>{perimeter}</strong></p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

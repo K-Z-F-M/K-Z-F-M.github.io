@@ -54,7 +54,32 @@
             height: 200px; /* Adjust height as needed */
             object-fit: cover;
         }
-        
+
+        .dashicons, .dashicons-before:before {
+    font-family: dashicons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: never;
+    text-decoration: none;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    vertical-align: top;
+    text-align: center;
+    transition: color 0.1s ease-in;
+}
+
+#to_top_scrollup {
+    cursor: pointer;
+    opacity: 0.5;
+    display: inline-block;
+}     
     </style>
     <script>
         function showSection(sectionId) {
@@ -68,7 +93,11 @@
             alert('');
             // You can replace the alert with another action, like redirecting:
             // window.location.href = "https://yourwebsite.com";
-        }  
+        } 
+
+     document.getElementById('to_top_scrollup').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
     </script>
 </head>
 <body>
@@ -342,7 +371,10 @@
        <span id="to_top_scrollup" class="dashicons dashicons-arrow-up-alt2" aria-hidden="true" style="opacity: 0.5; display: inline;">
        <span class="screen-reader-text">Scroll Up</span>
        </span>
-               
+
+       <span id="to_top_scrollup" class="dashicons dashicons-arrow-up-alt2" aria-hidden="true">
+       <span class="screen-reader-text">Scroll Up</span>
+       </span>          
     </section>  
 
     <section class="container section content-section" id="projects" style="display: none;">

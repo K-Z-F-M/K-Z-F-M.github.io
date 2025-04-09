@@ -37,6 +37,14 @@
             background: none;
             cursor: pointer;
         }
+
+     @media (max-width: 768px) {
+        .top-bar .mobile-toggle {
+           font-size: 24px;
+           top: 30px;
+           right: 28px;
+    }
+}
         
         :root {
     --border-size: 5px;
@@ -519,6 +527,12 @@
         document.documentElement.style.setProperty('--border-size', this.value + 'px');
     });
 </script>
+
+     <div class="top-bar">
+        <div class="mobile-toggle">☰</div>
+    </div>
+
+    <!-- JavaScript would go in a <script> tag, typically at the end of the body -->
             
 </body>
 </html>

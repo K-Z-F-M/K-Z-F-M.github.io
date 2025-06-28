@@ -60,7 +60,7 @@ nav button:hover {
 .logo {
     width: 150px; /* Set logo width */
     height: auto; /* Maintain aspect ratio */
-    horizontal-align: left; /* (Incorrect property; no effect – use 'float' or 'text-align' in parent) */
+    float: left;
 }
 
 /* Remove default styles from logo button */

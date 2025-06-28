@@ -29,7 +29,7 @@ h1, p {
     background: white; /* Dark background color */
     color: #212529; /* White text */
     text-align: center; /* Center the text */
-    padding: 20px 0; /* Top and bottom padding */
+    padding: 20px 0; /* Top padding */
 }
 
 /* Styling for navigation buttons */

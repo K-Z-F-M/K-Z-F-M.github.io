@@ -39,6 +39,7 @@ nav button:hover { background: #0056b3; }
 .logo {
     width: 150px;
     height: auto;
+    horizontal-align: left;
 }
 
 .logo-button {

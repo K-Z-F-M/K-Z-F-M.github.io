@@ -26,8 +26,8 @@ h1, p {
 
 /* Footer styling */
 .footer {
-    background: #212529; /* Dark background color */
-    color: white; /* White text */
+    background: white; /* Dark background color */
+    color: #212529; /* White text */
     text-align: center; /* Center the text */
     padding: 20px 0; /* Top and bottom padding */
 }

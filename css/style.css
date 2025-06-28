@@ -20,6 +20,31 @@ body {
   margin: auto;
 }
 
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    font-size: 1.2rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows items to wrap on smaller screens */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Set the color of all <h1> and <p> elements to black */
 h1, p {
     color: black;

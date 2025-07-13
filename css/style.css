@@ -143,6 +143,51 @@ nav button:hover {
     cursor: pointer;
 }
 
+/* Initially hide the mobile menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 60px; /* Adjust based on .top-bar height */
+    right: 10px;
+    width: 200px;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+}
+
+.mobile-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.mobile-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Show menu when .show class is added */
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Hide the menu on wider screens */
+@media (min-width: 769px) {
+    .mobile-toggle {
+        display: none;
+    }
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
 /* Dashicons font styling (used in WordPress) */
 .dashicons, .dashicons-before:before {
     font-family: dashicons; /* Use Dashicons font */

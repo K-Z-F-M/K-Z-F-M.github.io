@@ -18,10 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-
-    document.getElementById("borderSlider").addEventListener("input", function() {
-        document.documentElement.style.setProperty('--border-size', this.value + 'px');
-    });
     
     const borderSlider = document.getElementById("borderSlider");
     if (borderSlider) {

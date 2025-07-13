@@ -132,6 +132,17 @@ nav button:hover {
     object-fit: cover; /* Crop image to fill dimensions */
 }
 
+.top-bar {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+.mobile-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Dashicons font styling (used in WordPress) */
 .dashicons, .dashicons-before:before {
     font-family: dashicons; /* Use Dashicons font */

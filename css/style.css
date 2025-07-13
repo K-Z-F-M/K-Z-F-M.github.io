@@ -216,7 +216,7 @@ nav button:hover {
     }
 
     .mobile-menu {
-        width: 100%;
+        display: none; /* overridden by .active */
     }
 }
 

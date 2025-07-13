@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const menu = document.querySelector('.mobile-menu');
 
         toggle.addEventListener('click', function () {
-            menu.classList.toggle('show');
+            menu.classList.toggle('active');
         });
     });
     

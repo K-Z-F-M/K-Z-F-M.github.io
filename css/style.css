@@ -143,6 +143,10 @@ nav button:hover {
     cursor: pointer;
 }
 
+.top-bar .mobile-toggle {
+    position: absolute;
+}
+
 /* Dashicons font styling (used in WordPress) */
 .dashicons, .dashicons-before:before {
     font-family: dashicons; /* Use Dashicons font */

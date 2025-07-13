@@ -5,145 +5,105 @@ body {
 
 /* Hero section styling with background image and center-aligned white text */
 .hero {
-    background-image: url('Header Pic/00 LinkedIn Profile 1.jpg'); /* Set background image */
-    color: white; /* Text color in the hero section */
-    padding: 50px 0; /* Top and bottom padding */
-    text-align: center; /* Center-align text */
-    background-size: cover; /* Ensure background covers entire area */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* For mobile devices */
-@media (max-width: 768px) {
-  .hero {
-    font-size: 1.2rem;
-    padding: 20px;
+    background-image: url('Header Pic/00 LinkedIn Profile 1.jpg');
+    color: white;
+    padding: 50px 0;
     text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* allows items to wrap on smaller screens */
+/* Container for layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* Image responsiveness */
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Set the color of all <h1> and <p> elements to black */
+/* Set color of all headings and paragraphs */
 h1, p {
     color: black;
 }
 
-/* General section padding for layout spacing */
+/* Section spacing */
 .section {
-    padding: 50px 0; /* Top and bottom padding */
+    padding: 50px 0;
 }
 
 /* Footer styling */
 .footer {
-    background: white; /* Dark background color */
-    color: #212529; /* White text */
-    text-align: center; /* Center the text */
-    padding: 20px 0; 
+    background: white;
+    color: #212529;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Styling for navigation buttons */
+/* Navigation bar */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Navigation buttons */
 nav button {
-    margin: 5px; /* Margin around the button */
-    padding: 10px 20px; /* Padding inside the button */
-    border: none; /* Remove border */
-    background: #007bff; /* Blue background */
-    color: white; /* White text */
-    border-radius: 5px; /* Rounded corners */
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
 }
 
-/* Change button background on hover */
 nav button:hover {
-    background: #0056b3; /* Darker blue on hover */
+    background: #0056b3;
 }
 
-/* Profile picture styling */
+/* Profile image */
 .profile-pic {
-    width: 150px; /* Set width */
-    height: 150px; /* Set height */
-    border-radius: 50%; /* Make image circular */
-    object-fit: cover; /* Maintain aspect ratio, fill the box */
-    margin-bottom: 15px; /* Space below the image */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-/* Logo image styling */
+/* Logo image */
 .logo {
-    width: 150px; /* Set logo width */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
+    height: auto;
     float: left;
 }
 
-/* Remove default styles from logo button */
+/* Logo button */
 .logo-button {
-    border: none; /* No border */
-    background: none; /* Transparent background */
-    cursor: pointer; /* Pointer cursor on hover */
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-/* Responsive styling for screens narrower than 768px */
-@media (max-width: 768px) {
-    .top-bar .mobile-toggle {
-        font-size: 24px; /* Larger font size for toggle */
-        top: 30px; /* Position from top */
-        right: 28px; /* Position from right */
-    }
-}
-
-/* Declare CSS variable for border size */
-:root {
-    --border-size: 5px; /* Custom property for border width */
-}
-
-/* Class to apply image border using the CSS variable */
-.image-border {
-    border: var(--border-size) solid #343a40; /* Dark border with custom width */
-}
-
-/* Margin at the bottom of project container */
-.project-container {
-    margin-bottom: 20px; /* Space below each project container */
-}
-
-/* Styling for images inside Bootstrap carousels */
-.carousel-inner img {
-    width: 100%; /* Full width of container */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Crop image to fill dimensions */
-}
-
+/* Top bar */
 .top-bar {
     background: #333;
     color: white;
     padding: 10px;
 }
 
+/* Mobile menu toggle button */
 .mobile-toggle {
     font-size: 24px;
+    padding: 10px; /* added padding */
     cursor: pointer;
 }
 
-/* Initially hide the mobile menu */
+/* Mobile menu default hidden */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -152,7 +112,7 @@ nav button:hover {
     margin: 0;
     list-style: none;
     position: absolute;
-    top: 60px; /* Adjust based on .top-bar height */
+    top: 60px;
     right: 10px;
     width: 200px;
     z-index: 999;
@@ -173,46 +133,90 @@ nav button:hover {
     text-decoration: underline;
 }
 
-/* Show menu when .show class is added */
-.mobile-menu.show {
+/* Toggle visibility via JavaScript */
+.mobile-menu.active {
     display: flex;
 }
 
-/* Hide the menu on wider screens */
-@media (min-width: 769px) {
-    .mobile-toggle {
-        display: none;
-    }
-    .mobile-menu {
-        display: none !important;
-    }
+/* Border custom property */
+:root {
+    --border-size: 5px;
 }
 
-/* Hide the regular nav buttons in mobile view */
+.image-border {
+    border: var(--border-size) solid #343a40;
+}
+
+/* Project container spacing */
+.project-container {
+    margin-bottom: 20px;
+}
+
+/* Carousel image styling */
+.carousel-inner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Dashicons (optional) */
+.dashicons, .dashicons-before:before {
+    font-family: dashicons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: never;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    vertical-align: top;
+    text-align: center;
+    transition: color 0.1s ease-in;
+}
+
+/* Back to top button */
+#to_top_scrollup {
+    cursor: pointer;
+    opacity: 0.5;
+    display: inline-block;
+}
+
+/* ------------------------
+   Responsive Design
+------------------------ */
+
+/* Mobile view (max 768px) */
 @media (max-width: 768px) {
+    .hero {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
     nav {
         display: none; /* hide desktop nav */
     }
 
-    .mobile-menu {
-        display: none; /* hidden by default */
+    nav ul {
         flex-direction: column;
-        background-color: #333;
-        padding: 10px;
-    }
-
-    .mobile-menu.active {
-        display: flex; /* show on toggle */
+        align-items: center;
     }
 
     .mobile-toggle {
         display: block;
-        font-size: 24px;
-        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none; /* overridden by .active */
     }
 }
 
-/* Desktop view: hide mobile toggle and mobile menu */
+/* Desktop view (769px and above) */
 @media (min-width: 769px) {
     .mobile-toggle,
     .mobile-menu {
@@ -223,33 +227,3 @@ nav button:hover {
         display: flex;
     }
 }
-
-/* Dashicons font styling (used in WordPress) */
-.dashicons, .dashicons-before:before {
-    font-family: dashicons; /* Use Dashicons font */
-    display: inline-block; /* Align with text */
-    line-height: 1; /* Normal line height */
-    font-weight: 400; /* Normal weight */
-    font-style: normal; /* No italic */
-    speak: never; /* Disable screen reader speaking */
-    text-decoration: inherit; /* Inherit text decoration */
-    text-transform: none; /* Preserve case */
-    text-rendering: auto; /* Use default rendering */
-    -webkit-font-smoothing: antialiased; /* Smooth edges for WebKit */
-    -moz-osx-font-smoothing: grayscale; /* Smooth edges for Firefox */
-    width: 20px; /* Icon width */
-    height: 20px; /* Icon height */
-    font-size: 20px; /* Icon font size */
-    vertical-align: top; /* Align to top of text */
-    text-align: center; /* Center content horizontally */
-    transition: color 0.1s ease-in; /* Smooth color transition */
-}
-
-/* Back-to-top scroll button styling */
-#to_top_scrollup {
-    cursor: pointer; /* Show pointer cursor */
-    opacity: 0.5; /* Make it semi-transparent */
-    display: inline-block; /* Display like an inline element with block properties */
-}
-
-/* No extra cloding brackets needed */

@@ -188,6 +188,42 @@ nav button:hover {
     }
 }
 
+/* Hide the regular nav buttons in mobile view */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* hide desktop nav */
+    }
+
+    .mobile-menu {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .mobile-menu.active {
+        display: flex; /* show on toggle */
+    }
+
+    .mobile-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/* Desktop view: hide mobile toggle and mobile menu */
+@media (min-width: 769px) {
+    .mobile-toggle,
+    .mobile-menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+}
+
 /* Dashicons font styling (used in WordPress) */
 .dashicons, .dashicons-before:before {
     font-family: dashicons; /* Use Dashicons font */

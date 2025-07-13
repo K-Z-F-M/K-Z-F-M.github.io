@@ -11,6 +11,11 @@ function logoClicked(sectionId) {
     // window.location.href = "https://yourwebsite.com";
 }
 
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const scrollBtn = document.getElementById('to_top_scrollup');
     if (scrollBtn) {

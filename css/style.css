@@ -143,10 +143,6 @@ nav button:hover {
     cursor: pointer;
 }
 
-.top-bar .mobile-toggle {
-    position: absolute;
-}
-
 /* Dashicons font styling (used in WordPress) */
 .dashicons, .dashicons-before:before {
     font-family: dashicons; /* Use Dashicons font */
@@ -175,4 +171,4 @@ nav button:hover {
     display: inline-block; /* Display like an inline element with block properties */
 }
 
-/* Note: There is a syntax error at the end – extra ')' */
+/* Note: There is a syntax error at the end – extra ')' */)

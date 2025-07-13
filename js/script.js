@@ -1,8 +1,13 @@
 function showSection(sectionId) {
-    document.querySelectorAll('.content-section').forEach(section => {
-        section.style.display = 'none';
+    document.querySelectorAll(".content-section").forEach(section => {
+        section.style.display = "none";
     });
-    document.getElementById(sectionId).style.display = 'block';
+    const section = document.getElementById(sectionId);
+    if (section) section.style.display = "block";
+
+    // Close mobile menu after selection
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.classList.remove("show");
 }
 
 function logoClicked(sectionId) {

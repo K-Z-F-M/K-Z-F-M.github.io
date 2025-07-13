@@ -5,51 +5,44 @@ body {
 
 /* Hero section styling with background image and center-aligned white text */
 .hero {
-    background-image: url('Header Pic/00 LinkedIn Profile 1.jpg');
-    color: white;
-    padding: 50px 0;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('Header Pic/00 LinkedIn Profile 1.jpg'); /* Set background image */
+    color: white; /* Text color in the hero section */
+    padding: 50px 0; /* Top and bottom padding */
+    text-align: center; /* Center-align text */
+    background-size: cover; /* Ensure background covers entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Responsive adjustments for mobile devices */
+/* For mobile devices */
 @media (max-width: 768px) {
-    .hero {
-        font-size: 1.2rem;
-        padding: 20px;
-        text-align: center;
-    }
+  .hero {
+    font-size: 1.2rem;
+    padding: 20px;
+    text-align: center;
+  }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-bar .mobile-toggle {
-        font-size: 24px;
-        position: absolute;
-        top: 30px;
-        right: 28px;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows items to wrap on smaller screens */
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Set the color of all <h1> and <p> elements to black */
@@ -59,115 +52,134 @@ h1, p {
 
 /* General section padding for layout spacing */
 .section {
-    padding: 50px 0;
+    padding: 50px 0; /* Top and bottom padding */
 }
 
 /* Footer styling */
 .footer {
-    background: white;
-    color: #212529;
-    text-align: center;
-    padding: 20px 0;
+    background: white; /* Dark background color */
+    color: #212529; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; 
 }
 
 /* Styling for navigation buttons */
 nav button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 5px;
+    margin: 5px; /* Margin around the button */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove border */
+    background: #007bff; /* Blue background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
 }
 
+/* Change button background on hover */
 nav button:hover {
-    background: #0056b3;
+    background: #0056b3; /* Darker blue on hover */
 }
 
 /* Profile picture styling */
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
+    width: 150px; /* Set width */
+    height: 150px; /* Set height */
+    border-radius: 50%; /* Make image circular */
+    object-fit: cover; /* Maintain aspect ratio, fill the box */
+    margin-bottom: 15px; /* Space below the image */
 }
 
 /* Logo image styling */
 .logo {
-    width: 150px;
-    height: auto;
+    width: 150px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
     float: left;
 }
 
 /* Remove default styles from logo button */
 .logo-button {
-    border: none;
-    background: none;
-    cursor: pointer;
+    border: none; /* No border */
+    background: none; /* Transparent background */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Responsive styling for screens narrower than 768px */
+@media (max-width: 768px) {
+    .top-bar .mobile-toggle {
+        font-size: 24px; /* Larger font size for toggle */
+        top: 30px; /* Position from top */
+        right: 28px; /* Position from right */
+    }
+}
+
+/* Declare CSS variable for border size */
+:root {
+    --border-size: 5px; /* Custom property for border width */
+}
+
+/* Class to apply image border using the CSS variable */
+.image-border {
+    border: var(--border-size) solid #343a40; /* Dark border with custom width */
+}
+
+/* Margin at the bottom of project container */
+.project-container {
+    margin-bottom: 20px; /* Space below each project container */
+}
+
+/* Styling for images inside Bootstrap carousels */
+.carousel-inner img {
+    width: 100%; /* Full width of container */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop image to fill dimensions */
 }
 
 .top-bar {
     background: #333;
     color: white;
     padding: 10px;
-    position: relative; /* Needed for absolute child positioning */
 }
 
 .mobile-toggle {
     font-size: 24px;
     cursor: pointer;
+}
+
+.top-bar .mobile-toggle {
     position: absolute;
+}
+
+.top-bar .mobile-toggle {
+    position: absolute; /* optional, if you're positioning it */
+    font-size: 24px;
     top: 30px;
     right: 28px;
 }
 
-/* Declare CSS variable for border size */
-:root {
-    --border-size: 5px;
-}
-
-/* Apply image border using the CSS variable */
-.image-border {
-    border: var(--border-size) solid #343a40;
-}
-
-/* Margin at the bottom of project container */
-.project-container {
-    margin-bottom: 20px;
-}
-
-/* Carousel image styling */
-.carousel-inner img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
 /* Dashicons font styling (used in WordPress) */
 .dashicons, .dashicons-before:before {
-    font-family: dashicons;
-    display: inline-block;
-    line-height: 1;
-    font-weight: 400;
-    font-style: normal;
-    speak: never;
-    text-decoration: inherit;
-    text-transform: none;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    vertical-align: top;
-    text-align: center;
-    transition: color 0.1s ease-in;
+    font-family: dashicons; /* Use Dashicons font */
+    display: inline-block; /* Align with text */
+    line-height: 1; /* Normal line height */
+    font-weight: 400; /* Normal weight */
+    font-style: normal; /* No italic */
+    speak: never; /* Disable screen reader speaking */
+    text-decoration: inherit; /* Inherit text decoration */
+    text-transform: none; /* Preserve case */
+    text-rendering: auto; /* Use default rendering */
+    -webkit-font-smoothing: antialiased; /* Smooth edges for WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Smooth edges for Firefox */
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    font-size: 20px; /* Icon font size */
+    vertical-align: top; /* Align to top of text */
+    text-align: center; /* Center content horizontally */
+    transition: color 0.1s ease-in; /* Smooth color transition */
 }
 
 /* Back-to-top scroll button styling */
 #to_top_scrollup {
-    cursor: pointer;
-    opacity: 0.5;
-    display: inline-block;
+    cursor: pointer; /* Show pointer cursor */
+    opacity: 0.5; /* Make it semi-transparent */
+    display: inline-block; /* Display like an inline element with block properties */
 }
+
+/* Note: There is a syntax error at the end – extra ')' */

@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* make sure it's not overlapping */
+    position: relative;
     z-index: 1;
 }
 
@@ -72,7 +72,7 @@ nav button:hover {
 
 .nav-wrapper {
     position: relative;
-    z-index: 10; /* higher than hero */
+    z-index: 10;
     background: #333;
 }
 
@@ -147,11 +147,7 @@ nav button:hover {
     text-decoration: underline;
 }
 
-.mobile-menu.show {
-    display: flex;
-}
-
-/* Toggle visibility via JavaScript */
+.mobile-menu.show,
 .mobile-menu.active {
     display: flex;
 }
@@ -177,6 +173,7 @@ nav button:hover {
     object-fit: cover;
 }
 
+/* Back-to-top scroll button styling */
 #to_top_scrollup {
     width: 40px;
     height: 40px;
@@ -186,15 +183,11 @@ nav button:hover {
     bottom: 0px;
     right: 15px;
     color: white;
-    display: none;
     background: rgba(100, 100, 100, 0.5);
-}
-
-/* Back-to-top scroll button styling */
-#to_top_scrollup {
-    cursor: pointer; /* Show pointer cursor */
-    opacity: 0.5; /* Make it semi-transparent */
-    display: inline-block; /* Display like an inline element with block properties */
+    display: none;
+    cursor: pointer;
+    opacity: 0.5;
+    display: inline-block;
 }
 
 .fa {
@@ -218,7 +211,7 @@ nav button:hover {
     }
 
     nav {
-        display: none; /* hide desktop nav */
+        display: none;
     }
 
     nav ul {
@@ -231,7 +224,7 @@ nav button:hover {
     }
 
     .mobile-menu {
-        display: none; /* overridden by .active */
+        display: none;
     }
 }
 

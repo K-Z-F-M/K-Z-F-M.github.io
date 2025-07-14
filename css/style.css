@@ -181,11 +181,12 @@ nav button:hover {
     width: 40px;
     height: 40px;
     line-height: 40px;
+    text-align: center;
     position: fixed;
     bottom: 0px;
     right: 15px;
     color: white;
-    display: none;/* Hidden until scroll */
+    display: none;
     background: rgba(100, 100, 100, 0.5);
 }
 
@@ -194,6 +195,15 @@ nav button:hover {
     cursor: pointer; /* Show pointer cursor */
     opacity: 0.5; /* Make it semi-transparent */
     display: inline-block; /* Display like an inline element with block properties */
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* ------------------------

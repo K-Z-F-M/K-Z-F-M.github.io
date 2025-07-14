@@ -189,6 +189,13 @@ nav button:hover {
     background: rgba(100, 100, 100, 0.5);
 }
 
+/* Back-to-top scroll button styling */
+#to_top_scrollup {
+    cursor: pointer; /* Show pointer cursor */
+    opacity: 0.5; /* Make it semi-transparent */
+    display: inline-block; /* Display like an inline element with block properties */
+}
+
 /* ------------------------
    Responsive Design
 ------------------------ */

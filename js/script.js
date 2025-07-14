@@ -21,13 +21,20 @@ function toggleMenu() {
     menu.classList.toggle("show");
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollBtn = document.getElementById('to_top_scrollup');
-    if (scrollBtn) {
-        scrollBtn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+  // Show button when scrolling down
+  window.onscroll = function () {
+    let scrollBtn = document.getElementById("scrollUp");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
     }
+  };
+
+  // Scroll to top when clicked
+  document.getElementById("scrollUp").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
         const toggle = document.querySelector(".mobile-toggle");

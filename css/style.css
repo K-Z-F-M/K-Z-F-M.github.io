@@ -180,7 +180,7 @@ nav button:hover {
     line-height: 40px;
     text-align: center;
     position: fixed;
-    bottom: 0px;
+    bottom: 20px;
     right: 15px;
     color: white;
     background: rgba(100, 100, 100, 0.5);

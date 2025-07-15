@@ -40,12 +40,11 @@ h1, p {
 }
 
 /* Footer styling */
-.footer {
-    background: white;
-    color: #212529;
-    text-align: center;
-    padding: 20px 0;
-}
+ .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
 
 /* Navigation bar */
 nav ul {

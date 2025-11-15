@@ -25,14 +25,14 @@ function toggleMenu() {
   window.onscroll = function () {
     let scrollBtn = document.getElementById("scrollUp");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "block";
+      scrollBtn.style.display = "flex";
     } else {
       scrollBtn.style.display = "none";
     }
   };
 
   // Scroll to top when clicked
-  document.getElementById("scrollUp").addEventListener("click", function () {
+  document.getElementById("scrollUp").onclick = function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 

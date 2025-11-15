@@ -160,6 +160,12 @@ nav button:hover {
     border: var(--border-size) solid #343a40;
 }
 
+.image-border {
+  border-width: var(--border-size, 5px);
+  border-style: solid;
+  /* other border styles */
+}
+
 /* Project container spacing */
 .project-container {
     margin-bottom: 20px;

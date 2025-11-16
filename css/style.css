@@ -19,7 +19,7 @@ body {
 /* Container for layout */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 300px;
     margin: auto;
 }
 

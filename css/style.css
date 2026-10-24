@@ -1,13 +1,41 @@
 /* Set the default font for the entire body */
-body {
-    font-family: Arial, "Britannic Bold", sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-/* Hero section styling with background image and center-aligned white text */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Britannic Bold", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layout widths for desktop and phone */
+.container {
+    width: min(92%, 1200px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    display: block;
+    width: 100%;
+    padding: 40px 0;
+}
+
 .hero {
     background-image: url('Header Pic/00 LinkedIn Profile 1.jpg');
     color: black;
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
     background-size: cover;
     background-position: center;
@@ -16,37 +44,39 @@ body {
     z-index: 1;
 }
 
-/* Container for layout */
-.container {
-    width: 90%;
-    max-width: 300px;
-    margin: auto;
+.hero h1 {
+    margin: 20px 0 10px;
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
-/* Image responsiveness */
-img {
-    max-width: 100%;
-    height: auto;
+.hero p {
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
-/* Set color of all headings and paragraphs */
-h1, p {
+h1, h2, h3, p {
     color: black;
 }
 
-/* Section spacing */
 .section {
     padding: 50px 0;
 }
 
-/* Footer styling */
- .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f8f9fa;
-    }
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
 
 /* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -55,7 +85,6 @@ nav ul {
     list-style: none;
 }
 
-/* Navigation buttons */
 nav button {
     margin: 5px;
     padding: 10px 20px;
@@ -63,6 +92,9 @@ nav button {
     background: #007bff;
     color: white;
     border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 nav button:hover {
@@ -77,8 +109,8 @@ nav button:hover {
 
 /* Profile image */
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: min(200px, 40vw);
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
@@ -96,6 +128,8 @@ nav button:hover {
     border: none;
     background: none;
     cursor: pointer;
+    padding: 0;
+    display: inline-block;
 }
 
 /* Top bar */
@@ -158,12 +192,8 @@ nav button:hover {
 
 .image-border {
     border: var(--border-size) solid #343a40;
-}
-
-.image-border {
-  border-width: var(--border-size, 5px);
-  border-style: solid;
-  /* other border styles */
+    border-width: var(--border-size, 5px);
+    border-style: solid;
 }
 
 /* Project container spacing */
@@ -174,30 +204,30 @@ nav button:hover {
 /* Carousel image styling */
 .carousel-inner img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
 /* Back-to-top scroll button styling */
 #scrollUp {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: #333;
-  color: #fff;
-  border-radius: 50%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 24px;
-  z-index: 9999;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 9999;
 }
 
 #scrollUp i {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .fa {
@@ -213,11 +243,9 @@ nav button:hover {
    Responsive Design
 ------------------------ */
 
-/* Mobile view (max 768px) */
 @media (max-width: 768px) {
     .hero {
-        font-size: 1.2rem;
-        padding: 20px;
+        padding: 30px 15px;
     }
 
     nav {
@@ -236,13 +264,32 @@ nav button:hover {
     .mobile-menu {
         display: none;
     }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+    }
+
+    .carousel-inner img {
+        height: 180px;
+    }
 }
 
-/* Desktop view (769px and above) */
 @media (min-width: 769px) {
     .mobile-toggle,
     .mobile-menu {
-        display: none;
+        display: none !important;
     }
 
     nav {

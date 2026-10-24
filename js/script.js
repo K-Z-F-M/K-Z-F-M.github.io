@@ -7,7 +7,6 @@ function toggleMenu() {
 
 function showSection(sectionId) {
     document.querySelectorAll(".content-section").forEach(section => {
-        section.style.display = "none";
     });
 
     const section = document.getElementById(sectionId);

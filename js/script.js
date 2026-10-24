@@ -1,54 +1,53 @@
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu) {
+        menu.classList.toggle("show");
+    }
+}
+
 function showSection(sectionId) {
     document.querySelectorAll(".content-section").forEach(section => {
         section.style.display = "none";
     });
+
     const section = document.getElementById(sectionId);
-    if (section) section.style.display = "block";
-
-    // Close mobile menu after selection
-    const mobileMenu = document.getElementById("mobileMenu");
-    mobileMenu.classList.remove("show");
-}
-
-function logoClicked(sectionId) {
-    alert('');
-    // You can replace the alert with another action:
-    // window.location.href = "https://yourwebsite.com";
-}
-
-function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("show");
-}
-
-  // Show button when scrolling down
-  window.onscroll = function () {
-    let scrollBtn = document.getElementById("scrollUp");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "flex";
-    } else {
-      scrollBtn.style.display = "none";
+    if (section) {
+        section.style.display = "block";
     }
-  };
 
-  // Scroll to top when clicked
-  document.getElementById("scrollUp").onclick = function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+    const menu = document.getElementById("mobileMenu");
+    if (menu) {
+        menu.classList.remove("show");
+    }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
-        const toggle = document.querySelector(".mobile-toggle");
-        const menu = document.querySelector(".mobile-menu");
+    const toggle = document.querySelector(".mobile-toggle");
+    const menu = document.querySelector(".mobile-menu");
 
+    if (toggle && menu) {
         toggle.addEventListener("click", function () {
-            menu.classList.toggle("active");
+            menu.classList.toggle("show");
         });
-    });
-    
+    }
+
     const borderSlider = document.getElementById("borderSlider");
     if (borderSlider) {
         borderSlider.addEventListener("input", function () {
-            document.documentElement.style.setProperty('--border-size', this.value + 'px');
+            document.documentElement.style.setProperty("--border-size", this.value + "px");
+        });
+    }
+
+    const scrollBtn = document.getElementById("scrollUp");
+    if (scrollBtn) {
+        const updateScrollBtn = function () {
+            scrollBtn.style.display = window.scrollY > 200 ? "flex" : "none";
+        };
+
+        updateScrollBtn();
+        window.addEventListener("scroll", updateScrollBtn);
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 });

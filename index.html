@@ -10,37 +10,33 @@
 </head>
 <body>
     <header class="hero">
-        <div class="hero-top">
-            <button class="logo-button" type="button" aria-label="Open home section" data-section="home" onclick="showSection('home')">
-                <img src="02 LOGO/KZFM LOGO.jpg" alt="My Logo" width="150">
-            </button>
+        <button class="logo-button" type="button" aria-label="Open home section" onclick="showSection('home')">
+            <img src="02 LOGO/KZFM LOGO.jpg" alt="My Logo" width="150">
+        </button>
 
-            <div class="hero-copy">
-                <h1>KIM ZOILO FELIX G. MAGNAYE</h1>
-                <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
+        <h1>KIM ZOILO FELIX G. MAGNAYE</h1>
+        <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
 
-                <nav class="desktop-nav" aria-label="Main navigation">
-                    <button type="button" data-section="about" onclick="showSection('about')">About Me</button>
-                    <button type="button" data-section="education" onclick="showSection('education')">Education</button>
-                    <button type="button" data-section="skills" onclick="showSection('skills')">Skills</button>
-                    <button type="button" data-section="experience" onclick="showSection('experience')">Work Experience</button>
-                    <button type="button" data-section="projects" onclick="showSection('projects')">Projects</button>
-                    <button type="button" data-section="contact" onclick="showSection('contact')">Contact</button>
-                </nav>
-            </div>
-        </div>
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <button type="button" onclick="showSection('about')">About Me</button>
+            <button type="button" onclick="showSection('education')">Education</button>
+            <button type="button" onclick="showSection('skills')">Skills</button>
+            <button type="button" onclick="showSection('experience')">Work Experience</button>
+            <button type="button" onclick="showSection('projects')">Projects</button>
+            <button type="button" onclick="showSection('contact')">Contact</button>
+        </nav>
 
         <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
             <span class="hamburger-icon" aria-hidden="true">☰</span>
         </button>
 
         <ul class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-            <li><a href="#about" data-section="about" onclick="showSection('about')">About Me</a></li>
-            <li><a href="#education" data-section="education" onclick="showSection('education')">Education</a></li>
-            <li><a href="#skills" data-section="skills" onclick="showSection('skills')">Skills</a></li>
-            <li><a href="#experience" data-section="experience" onclick="showSection('experience')">Work Experience</a></li>
-            <li><a href="#projects" data-section="projects" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#contact" data-section="contact" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#education" onclick="showSection('education')">Education</a></li>
+            <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#experience" onclick="showSection('experience')">Work Experience</a></li>
+            <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
         </ul>
     </header>
 
@@ -90,7 +86,7 @@
     </section>
 
     <section class="container section content-section" id="education" style="display: none;">
-        <h2>Education</h2>
+        <h2>EDUCATION</h2>
         <h3>Bachelor of Science in Civil Engineering</h3>
         <p><strong>University of Batangas – Batangas City, Philippines</strong> (May 2006)</p>
         <p>The Bachelor of Science in Civil Engineering (BSCE) program at the University of Batangas provides students with comprehensive knowledge and technical proficiency in planning, designing, and supervising civil engineering projects.</p>
@@ -113,49 +109,184 @@
             <li>BIM 360 Collaboration</li>
             <li>Navisworks Coordination</li>
             <li>4D & 5D BIM Visualization</li>
-            <li>Structural Detailing and Quantity Takeoff</li>
-            <li>Coordination, Drafting, and Project Documentation</li>
         </ul>
     </section>
 
     <section class="container section content-section" id="experience" style="display: none;">
         <h2>Work Experience</h2>
+        <h3>BIM Technician</h3>
+        <p><strong>MCON Products Inc. - Ottawa, ON</strong> (Jan 2026 - Present)</p>
+        <ul>
+            <li>Read and interpret detailed civil engineering drawings, including plan and profile drawings, to support design and manufacturing requirements.</li>
+            <li>Prepare shop drawings for client review and approval, and production drawings for manufacturing, using Autodesk Inventor, AutoCAD, and MH Pro.</li>
+            <li>Maintain and manage the status of issued shop drawings, ensuring timely follow-up with internal teams and external clients.</li>
+            <li>Develop and maintain a library of standard shop drawings to support consistency and efficiency in production.</li>
+            <li>Produce product proposal drawings and technical layouts for specifier and client approvals.</li>
+            <li>Prepare material quantity take-offs to support costing, production planning, and procurement.</li>
+            <li>Create image renderings of company products for online catalogues and website use.</li>
+            <li>Liaise with engineering, sales, plant staff, contractors, consulting engineers, and external sales representatives throughout the sales, design, and production process.</li>
+            <li>Conduct spot checks on onsite plant production to verify drawing compliance and product accuracy.</li>
+            <li>Support production and delivery scheduling in coordination with internal departments.</li>
+            <li>Travel to client and project sites as required to support design coordination and technical clarification.</li>
+            <li>Collaborate with software vendors and evaluate drafting and design software applications to improve departmental workflows.</li>
+            <li>Utilize ERP software to support production coordination and documentation.</li>
+            <li>Perform other drafting-related and technical support tasks as required.</li>
+        </ul>
 
-        <div class="experience-item">
-            <h3>BIM Technologist / Structural BIM Modeler</h3>
-            <p class="experience-meta"><strong>Freelance / Contract Consultant</strong> | 2023 – Present</p>
-            <ul>
-                <li>Produced coordinated structural and architectural BIM models for building and infrastructure projects.</li>
-                <li>Prepared detailed Revit drawings, reinforcement layouts, and shop drawing packages for construction documentation.</li>
-                <li>Collaborated with design teams to review model clashes, improve constructability, and maintain project coordination.</li>
-                <li>Supported 4D and quantity-based project visualization and reporting using BIM workflows.</li>
-            </ul>
-        </div>
+        <h3>BIM Modeler</h3>
+        <p><strong>Cunliffe and Associates - Ottawa, ON</strong> (June 2024 - December 2024)</p>
+        <ul>
+            <li>Provided detailed Revit models and construction drawings for structural projects.</li>
+            <li>Prepared drawings for permit, tender, and construction submissions.</li>
+            <li>Collaborated with Senior BIM Modelers and Engineers to ensure high-quality and efficient production of drawings.</li>
+            <li>Ensured models and drawings met company standards and client specifications.</li>
+            <li>Developed and modified Revit families based on project complexity to streamline workflows and improve efficiency within the project timeline.</li>
+        </ul>
 
-        <div class="experience-item">
-            <h3>Structural Modeler / CAD Technician</h3>
-            <p class="experience-meta"><strong>Project-Based Roles</strong> | 2018 – 2023</p>
-            <ul>
-                <li>Built and revised structural framing, slabs, beams, columns, and reinforcement details in Revit and AutoCAD.</li>
-                <li>Created submission drawings, fabrication details, and technical sheets for consultants and contractors.</li>
-                <li>Ensured drawing accuracy, sheet coordination, and model consistency across project phases.</li>
-                <li>Worked closely with engineers to convert design intent into clean, buildable BIM documentation.</li>
-            </ul>
-        </div>
+        <h3>Assistant BIM Coordinator</h3>
+        <p><strong>China State Construction Engineering Corp. Ltd. - Singapore</strong> (July 2022 - November 2022)</p>
+        <ul>
+            <li>Established and monitored the modeling environment setup.</li>
+            <li>Prepared a model schedule aligned with the site schedule, ensuring it followed the project's critical path.</li>
+            <li>Collaborated with interdisciplinary teams to resolve clashes and design issues.</li>
+            <li>Oversaw the scope of work and schedules of BIM modelers.</li>
+            <li>Worked closely with the project team to address issues related to site progress.</li>
+            <li>Developed standard templates for structural shop drawings, such as Concrete Body Plans.</li>
+        </ul>
 
-        <div class="experience-item">
-            <h3>Junior Structural Engineer / Drafting Specialist</h3>
-            <p class="experience-meta"><strong>Construction and Design Support</strong> | 2010 – 2018</p>
-            <ul>
-                <li>Assisted in structural design checks, drawing preparation, and project quantity documentation.</li>
-                <li>Reviewed plans and specifications to support implementation and coordination on project sites.</li>
-                <li>Maintained organized documentation for design revisions, technical submittals, and site coordination.</li>
-            </ul>
-        </div>
+        <h3>BIM Modeler</h3>
+        <p><strong>Woh Hup (Private) Limited. - Singapore</strong> (December 2016 - April 2022)</p>
+        <ul>
+            <li>Working on assigned tasks or urgent works as given instruction by Design Engineer.</li>
+            <li>Doing preliminary structural model as reference for construction drawings.</li>
+            <li>Preparing detailed piling plans extracted from Revit model for easy site visualization.</li>
+            <li>Preparing coordinated concrete body plans and detailed sections and structure penetrations using Revit.</li>
+            <li>Worked closely with the project team to address issues related to site progress.</li>
+            <li>Coordinated with architecture, dimensions, and M&E teams to detect clashes and penetrations.</li>
+        </ul>
+
+        <h3>Assistant Project Engineer</h3>
+        <p><strong>CKR Contract Services Pte. Ltd. - Singapore</strong> (November 2014 - November 2016)</p>
+        <ul>
+            <li>Assisting Project Engineer by resolving structural issues through coordination with the consultants.</li>
+            <li>Preparing RFA, RFI and RFSDA for submission.</li>
+            <li>Preparing method statement for submission.</li>
+            <li>Worked with consultants and RTO to ensure compliance with work requirements.</li>
+            <li>Collaborating with other disciplines (Architectural and M&E services) to anticipate and avoid clashes.</li>
+            <li>Coordinating with subcontractors on changes by issuing latest construction drawings and approved RFA, RFI and RFSDA prior to site execution.</li>
+            <li>Ensured construction work complies with all engineering standards, codes, specifications and design instruction.</li>
+            <li>Analyze, study, and review all pertinent project documents given by the superior prior to preparation of structural fabrication and erection detailing works.</li>
+            <li>Performing other related works such as preparing concrete body plans and sections using AutoCAD.</li>
+            <li>Attending and conducting daily toolbox and safety meetings with the workers and subcontractors.</li>
+        </ul>
+
+        <h3>Project Coordinator</h3>
+        <p><strong>Sunray Woodcraft Construction Pte Ltd. - Singapore</strong> (January 2014 - November 2014)</p>
+        <ul>
+            <li>Assisted Project Manager by enforcing quality control and expediting subcontractors in project operation.</li>
+            <li>Attended and reviewed all benchmarking meetings.</li>
+            <li>Certification of submission for subcontractors and suppliers for progress payment and finalization of accounts.</li>
+            <li>Reported accurate quantities for labor cost reports and monitored material ledgers.</li>
+            <li>Identified contract document conflicts and recommended solutions.</li>
+            <li>Worked with consultants and RTO to ensure compliance with work requirements.</li>
+            <li>Ensured construction work complies with all engineering standards, codes, specifications and design instruction.</li>
+            <li>Ensured construction QA/QC processes are being implemented by the workers.</li>
+            <li>Performed other related works such as preparing concrete body plans and sections using AutoCAD.</li>
+            <li>Conducted daily toolbox and safety meetings with the workers and subcontractors.</li>
+        </ul>
+
+        <h3>Site Engineer / Structural Draftsman</h3>
+        <p><strong>Sunshine Reno & Construction Pte Ltd. - Singapore</strong> (July 2013 - Jan 2014)</p>
+        <ul>
+            <li>Supervised project site operation.</li>
+            <li>Attended and reviewed all benchmarking meetings.</li>
+            <li>Prepared progress claims based on evaluated accomplishment.</li>
+            <li>Prepared shop drawings, editing, and checking of drawings using AutoCAD.</li>
+            <li>Reported accurate quantities for labor cost reports and monitored material ledgers.</li>
+            <li>Identified contract document conflicts and recommended solutions.</li>
+            <li>Worked with consultants and RTO to ensure compliance with work requirements.</li>
+            <li>Ensured construction work complies with all engineering standards, codes, specifications and design instruction.</li>
+            <li>Ensured construction QA/QC processes are being implemented by the workers.</li>
+            <li>Conducted daily toolbox and safety meetings with the workers and subcontractors.</li>
+        </ul>
+
+        <h3>Project Engineer</h3>
+        <p><strong>Eton Properties Philippines, Inc. - Philippines</strong> (June 2010 - January 2013)</p>
+        <ul>
+            <li>Assisted the Project Manager in project planning, coordination and oversaw all site works.</li>
+            <li>Conducted site monitoring and inspection of contractor activities to evaluate daily accomplishment.</li>
+            <li>Prepared site weekly accomplishment reports indicating percentage status for billing.</li>
+            <li>Ensured the standard phase, flow, and quality of work to avoid construction delays.</li>
+            <li>Prepared shop drawings, editing, and checking of drawings using AutoCAD.</li>
+            <li>Prepared progress billing according to contractor accomplishment.</li>
+            <li>Designed and estimated additional project work as requested.</li>
+            <li>Prepared quantity take-offs for architectural and structural works.</li>
+            <li>Prepared BQ and cost estimates for approval of Unit Head.</li>
+            <li>Conducted weekly meetings with contractors, suppliers, and consultants.</li>
+            <li>Attended monthly meetings to report all site activities and seek approvals.</li>
+            <li>Attended site safety coordination meetings and discussed safety reminders and concerns.</li>
+        </ul>
+
+        <h3>Project Engineer</h3>
+        <p><strong>Solar Resources Inc. - Philippines</strong> (July 2009 - June 2010)</p>
+        <ul>
+            <li>Conducted site monitoring and inspection of contractor activities to evaluate daily accomplishment.</li>
+            <li>Updated management regularly on construction progress.</li>
+            <li>Ensured the standard phase, flow, and quality of work to avoid unnecessary construction delays.</li>
+            <li>Checked the status and quality of structures to ensure materials were not sub-standard.</li>
+            <li>Monitored and conducted quality inspections of house renovations for homeowner compliance.</li>
+            <li>Assisted homeowners with repairs by endorsing issues to contractors for immediate rectification.</li>
+            <li>Assisted clients during move-in schedules and installation checks.</li>
+            <li>Prepared weekly accomplishment reports and progress billing.</li>
+            <li>Designed and estimated additional project work as requested.</li>
+            <li>Prepared quantity and cost estimates to ensure cost-effective materials.</li>
+            <li>Attended weekly and monthly meetings with contractors and stakeholders.</li>
+        </ul>
+
+        <h3>Jr. Project Engineer</h3>
+        <p><strong>Netforce International Inc. - Philippines</strong> (July 2009 - June 2010)</p>
+        <ul>
+            <li>Prepare technical materials for project meetings.</li>
+            <li>Provide technical back-up and supervision for existing contract requirements.</li>
+            <li>Supervise specific site works in accordance with project requirements.</li>
+            <li>Assist the project manager in monitoring work progress.</li>
+            <li>Ensure the efficient running of daily site operations.</li>
+            <li>Plan and manage site operations.</li>
+            <li>Coordinate with consultants and attend site inspections and meetings.</li>
+            <li>Monitor subcontractor progress.</li>
+            <li>Ensure environment, health, and safety procedures are respected.</li>
+        </ul>
+
+        <h3>Field Engineer</h3>
+        <p><strong>Rayman Builders Inc. - Philippines</strong> (August 2008 - January 2009)</p>
+        <ul>
+            <li>Supervised worker performance to meet standards and schedules.</li>
+            <li>Provided necessary information to ensure work complied with drawings and specifications.</li>
+            <li>Inspected equipment before final QC inspection.</li>
+            <li>Coordinated with site inspectors to resolve site execution problems.</li>
+            <li>Ensured environment, health, and safety procedures are respected.</li>
+            <li>Supervised and organized major construction sites.</li>
+            <li>Followed up and reported the progress of construction.</li>
+            <li>Delegated responsibility to General Foreman and other personnel.</li>
+        </ul>
+
+        <h3>Field Engineer</h3>
+        <p><strong>FFCruz & Co. Inc. - Philippines</strong> (July 2007 - April 2008)</p>
+        <ul>
+            <li>Supervised worker performance to meet standards and schedules.</li>
+            <li>Provided necessary information to ensure work complied with drawings and specifications.</li>
+            <li>Inspected equipment before final QC inspection.</li>
+            <li>Coordinated with site inspectors to resolve site execution problems.</li>
+            <li>Ensured environment, health, and safety procedures are respected.</li>
+            <li>Supervised and organized major construction sites.</li>
+            <li>Followed up and reported the progress of construction.</li>
+            <li>Delegated responsibility to General Foreman and other personnel.</li>
+        </ul>
     </section>
 
     <section class="container section content-section" id="projects" style="display: none;">
         <h2>Projects</h2>
+
         <div class="container mt-4">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col">
@@ -184,6 +315,90 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col">
+                    <div class="project-container">
+                        <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Project Images/Project2-1.jpg" class="d-block w-100 image-border" alt="Project 2 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2-2.jpg" class="d-block w-100 image-border" alt="Project 2 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2-3.jpg" class="d-block w-100 image-border" alt="Project 2 Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2-4.jpg" class="d-block w-100 image-border" alt="Project 2 Image 4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2-5.jpg" class="d-block w-100 image-border" alt="Project 2 Image 5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="project-container">
+                        <div id="carouselProject3" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Project Images/Project1.jpg" class="d-block w-100 image-border" alt="Project 3 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2.jpg" class="d-block w-100 image-border" alt="Project 3 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project3.jpg" class="d-block w-100 image-border" alt="Project 3 Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project4.jpg" class="d-block w-100 image-border" alt="Project 3 Image 4">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="project-container">
+                        <div id="carouselProject4" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Project Images/Project1.jpg" class="d-block w-100 image-border" alt="Project 4 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2.jpg" class="d-block w-100 image-border" alt="Project 4 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project3.jpg" class="d-block w-100 image-border" alt="Project 4 Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project4.jpg" class="d-block w-100 image-border" alt="Project 4 Image 4">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject4" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject4" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -192,9 +407,9 @@
         <h2>Contact</h2>
         <p>Cell: +1 613 263 9677</p>
         <p>Email: <a href="mailto:kimzfmagnaye@yahoo.com">kimzfmagnaye@yahoo.com</a></p>
-        <p class="contact-social">
+        <p>
             <a class="social-link" href="https://www.linkedin.com/in/kim-zoilo-felix-magnaye-4831aa66/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">
-                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </p>
     </section>

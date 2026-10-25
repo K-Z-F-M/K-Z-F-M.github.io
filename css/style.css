@@ -44,7 +44,10 @@ label {
 }
 
 .hero {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,9 +61,19 @@ label {
     color: black;
     text-align: center;
     padding: 40px 20px 30px;
-    z-index: 1;
+    z-index: 20;
     overflow: hidden;
-    box-shadow: inset 0 -16px 30px rgba(2, 6, 23, 0.18);
+    box-shadow: inset 0 -16px 30px rgba(2, 6, 23, 0.18), 0 10px 28px rgba(2, 6, 23, 0.08);
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero::before {
@@ -68,7 +81,7 @@ label {
     position: absolute;
     inset: 0;
     background: rgba(12, 19, 31, 0.12);
-    z-index: -1;
+    z-index: 1;
 }
 
 .hero h1 {

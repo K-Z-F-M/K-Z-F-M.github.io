@@ -1,84 +1,211 @@
-function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    if (menu) {
-        menu.classList.toggle("show");
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KZFM - WEBPAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-top">
+            <button class="logo-button" type="button" aria-label="Open home section" data-section="home" onclick="showSection('home')">
+                <img src="02 LOGO/KZFM LOGO.jpg" alt="My Logo" width="150">
+            </button>
 
-function setActiveNav(sectionId) {
-    const navButtons = document.querySelectorAll(".desktop-nav button, .mobile-menu a");
-    navButtons.forEach((item) => {
-        const matches = item.dataset.section === sectionId;
-        item.classList.toggle("active", matches);
-    });
-}
+            <div class="hero-copy">
+                <h1>KIM ZOILO FELIX G. MAGNAYE</h1>
+                <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
 
-function showSection(sectionId) {
-    document.querySelectorAll(".content-section").forEach(function (section) {
-        section.style.display = "none";
-    });
+                <nav class="desktop-nav" aria-label="Main navigation">
+                    <button type="button" data-section="about" onclick="showSection('about')">About Me</button>
+                    <button type="button" data-section="education" onclick="showSection('education')">Education</button>
+                    <button type="button" data-section="skills" onclick="showSection('skills')">Skills</button>
+                    <button type="button" data-section="experience" onclick="showSection('experience')">Work Experience</button>
+                    <button type="button" data-section="projects" onclick="showSection('projects')">Projects</button>
+                    <button type="button" data-section="contact" onclick="showSection('contact')">Contact</button>
+                </nav>
+            </div>
+        </div>
 
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.style.display = "block";
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+        <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-icon" aria-hidden="true">☰</span>
+        </button>
 
-    setActiveNav(sectionId);
+        <ul class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+            <li><a href="#about" data-section="about" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#education" data-section="education" onclick="showSection('education')">Education</a></li>
+            <li><a href="#skills" data-section="skills" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#experience" data-section="experience" onclick="showSection('experience')">Work Experience</a></li>
+            <li><a href="#projects" data-section="projects" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#contact" data-section="contact" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </header>
 
-    const menu = document.getElementById("mobileMenu");
-    if (menu) {
-        menu.classList.remove("show");
-    }
+    <section class="container section content-section" id="home" style="display: block;">
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Project Images/Project1.jpg" class="d-block w-100 image-border" alt="High-Rise Structural Modeling">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>High-Rise Structural Modeling</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Project Images/Project2.jpg" class="d-block w-100 image-border" alt="Piling Plans & Reinforcement Detailing">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Piling Plans & Reinforcement Detailing</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Project Images/Project3.jpg" class="d-block w-100 image-border" alt="MEPF Coordination in Large-Scale Buildings">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>MEPF Coordination in Large-Scale Buildings</h5>
+                    </div>
+                </div>
+            </div>
 
-    const toggle = document.querySelector(".mobile-toggle");
-    if (toggle) {
-        toggle.setAttribute("aria-expanded", "false");
-    }
-}
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".mobile-toggle");
-    const menu = document.querySelector(".mobile-menu");
+        <div class="mt-3">
+            <input type="range" id="borderSlider" min="1" max="20" value="5">
+            <label for="borderSlider">Adjust Border Size:</label>
+        </div>
+    </section>
 
-    if (toggle && menu) {
-        toggle.addEventListener("click", function () {
-            const isOpen = menu.classList.toggle("show");
-            toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-    }
+    <section class="container section content-section" id="about" style="display: none;">
+        <h2>About Me</h2>
+        <img src="01 Profile Pic/Profile Pic.jpg" alt="Kim Zoilo Felix Magnaye" class="profile-pic">
+        <p>I am a skilled BIM Technologist with expertise in structural modeling, shop drawings, and 4D/5D simulations. Passionate about integrating digital solutions in construction.</p>
+    </section>
 
-    const borderSlider = document.getElementById("borderSlider");
-    if (borderSlider) {
-        borderSlider.addEventListener("input", function () {
-            document.documentElement.style.setProperty("--border-size", this.value + "px");
-        });
-    }
+    <section class="container section content-section" id="education" style="display: none;">
+        <h2>Education</h2>
+        <h3>Bachelor of Science in Civil Engineering</h3>
+        <p><strong>University of Batangas – Batangas City, Philippines</strong> (May 2006)</p>
+        <p>The Bachelor of Science in Civil Engineering (BSCE) program at the University of Batangas provides students with comprehensive knowledge and technical proficiency in planning, designing, and supervising civil engineering projects.</p>
+        <p>The curriculum emphasizes structural engineering, geotechnical engineering, water resources engineering, and project management.</p>
 
-    const scrollBtn = document.getElementById("scrollUp");
-    if (scrollBtn) {
-        const updateScrollBtn = function () {
-            scrollBtn.style.display = window.scrollY > 200 ? "flex" : "none";
-        };
+        <h3>Building Information Modeling – Lifecycle Management</h3>
+        <p><strong>Algonquin College of Applied Arts and Technology – Ottawa, Ontario, Canada</strong> (Jan 2023 – Aug 2023)</p>
+        <p>The BIM-LM program equips students with specialized training for architecture, engineering, and construction using digital building models and collaborative project delivery workflows.</p>
+        <p>Students gain skills in BIM execution plans, interdisciplinary coordination, and efficient project delivery using modern digital tools.</p>
 
-        updateScrollBtn();
-        window.addEventListener("scroll", updateScrollBtn);
-        scrollBtn.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    }
+        <h3>Building Automation System Operations</h3>
+        <p><strong>Algonquin College of Applied Arts and Technology – Ottawa, Ontario, Canada</strong> (Jan 2024 – Aug 2024)</p>
+        <p>This program focuses on building technologies, sustainability, and performance optimization, with emphasis on smart building operations and automation systems.</p>
+    </section>
 
-    const logoItems = document.querySelectorAll(".company-logo-item");
-    if (logoItems.length) {
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                }
-            });
-        }, { threshold: 0.25 });
+    <section class="container section content-section" id="skills" style="display: none;">
+        <h2>Skills</h2>
+        <ul>
+            <li>Revit (Structural Modeling & Shop Drawings)</li>
+            <li>BIM 360 Collaboration</li>
+            <li>Navisworks Coordination</li>
+            <li>4D & 5D BIM Visualization</li>
+            <li>Structural Detailing and Quantity Takeoff</li>
+            <li>Coordination, Drafting, and Project Documentation</li>
+        </ul>
+    </section>
 
-        logoItems.forEach((item) => revealObserver.observe(item));
-    }
-});
+    <section class="container section content-section" id="experience" style="display: none;">
+        <h2>Work Experience</h2>
 
+        <div class="experience-item">
+            <h3>BIM Technologist / Structural BIM Modeler</h3>
+            <p class="experience-meta"><strong>Freelance / Contract Consultant</strong> | 2023 – Present</p>
+            <ul>
+                <li>Produced coordinated structural and architectural BIM models for building and infrastructure projects.</li>
+                <li>Prepared detailed Revit drawings, reinforcement layouts, and shop drawing packages for construction documentation.</li>
+                <li>Collaborated with design teams to review model clashes, improve constructability, and maintain project coordination.</li>
+                <li>Supported 4D and quantity-based project visualization and reporting using BIM workflows.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Structural Modeler / CAD Technician</h3>
+            <p class="experience-meta"><strong>Project-Based Roles</strong> | 2018 – 2023</p>
+            <ul>
+                <li>Built and revised structural framing, slabs, beams, columns, and reinforcement details in Revit and AutoCAD.</li>
+                <li>Created submission drawings, fabrication details, and technical sheets for consultants and contractors.</li>
+                <li>Ensured drawing accuracy, sheet coordination, and model consistency across project phases.</li>
+                <li>Worked closely with engineers to convert design intent into clean, buildable BIM documentation.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Junior Structural Engineer / Drafting Specialist</h3>
+            <p class="experience-meta"><strong>Construction and Design Support</strong> | 2010 – 2018</p>
+            <ul>
+                <li>Assisted in structural design checks, drawing preparation, and project quantity documentation.</li>
+                <li>Reviewed plans and specifications to support implementation and coordination on project sites.</li>
+                <li>Maintained organized documentation for design revisions, technical submittals, and site coordination.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container section content-section" id="projects" style="display: none;">
+        <h2>Projects</h2>
+        <div class="container mt-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="project-container">
+                        <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Project Images/Project1.jpg" class="d-block w-100 image-border" alt="Project 1 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2.jpg" class="d-block w-100 image-border" alt="Project 1 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project3.jpg" class="d-block w-100 image-border" alt="Project 1 Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project4.jpg" class="d-block w-100 image-border" alt="Project 1 Image 4">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section content-section" id="contact" style="display: none;">
+        <h2>Contact</h2>
+        <p>Cell: +1 613 263 9677</p>
+        <p>Email: <a href="mailto:kimzfmagnaye@yahoo.com">kimzfmagnaye@yahoo.com</a></p>
+        <p class="contact-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kim-zoilo-felix-magnaye-4831aa66/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </p>
+    </section>
+
+    <div id="scrollUp"><i class="fa fa-chevron-up"></i></div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kim Zoilo Felix Magnaye | BIM Technologist</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

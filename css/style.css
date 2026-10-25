@@ -36,7 +36,7 @@ label {
 }
 
 .content-section {
-    display: none;
+    display: block;
     width: 100%;
     padding: 40px 0;
     scroll-margin-top: 110px;

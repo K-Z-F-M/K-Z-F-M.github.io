@@ -80,4 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         logoItems.forEach((item) => revealObserver.observe(item));
     }
+
+    if (document.querySelector(".content-section")) {
+        showSection("home");
+    }
 });

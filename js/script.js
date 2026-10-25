@@ -50,4 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
+
+    const logoItems = document.querySelectorAll(".company-logo-item");
+    if (logoItems.length) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                }
+            });
+        }, { threshold: 0.25 });
+
+        logoItems.forEach((item) => revealObserver.observe(item));
+    }
 });

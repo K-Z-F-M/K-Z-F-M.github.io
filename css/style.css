@@ -1,496 +1,212 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, "Britannic Bold", sans-serif;
-    line-height: 1.6;
-    color: #111;
-    background: linear-gradient(180deg, #f5f7fb 0%, #eef3f8 100%);
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    color: inherit;
-}
-
-button,
-input,
-label {
-    font: inherit;
-}
-
-.container {
-    width: min(92%, 1200px);
-    margin: 0 auto;
-}
-
-.content-section {
-    display: none;
-    width: 100%;
-    padding: 40px 0;
-    scroll-margin-top: 110px;
-    transition: opacity 0.2s ease;
-}
-
-.hero {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-    background-image: linear-gradient(rgba(255,255,255,0.12), rgba(10,22,38,0.55)), url('../Header Pic/00 LinkedIn Profile 1.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    color: black;
-    text-align: center;
-    padding: 18px 26px 12px;
-    z-index: 20;
-    overflow: hidden;
-    box-shadow: inset 0 -16px 30px rgba(2, 6, 23, 0.18), 0 10px 28px rgba(2, 6, 23, 0.08);
-}
-
-.hero-top {
-    width: min(100%, 1200px);
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.hero-copy {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(12, 19, 31, 0.12);
-    z-index: 1;
-}
-
-.hero .logo-button,
-.hero h1,
-.hero p,
-.hero .desktop-nav {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    margin: 0;
-    font-size: clamp(1.9rem, 3vw, 2.8rem);
-    color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
-    letter-spacing: 0.04em;
-    line-height: 1.1;
-}
-
-.hero p {
-    margin: 8px 0 10px;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    color: rgba(255, 255, 255, 0.96);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-}
-
-h1, h2, h3, p {
-    color: #111827;
-}
-
-.section {
-    padding: 50px 0;
-}
-
-.footer {
-    text-align: center;
-    padding: 26px 20px;
-    background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
-    color: #e5e7eb;
-    font-weight: 600;
-}
-
-.desktop-nav {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0;
-}
-
-nav button {
-    margin: 4px 0;
-    padding: 8px 14px;
-    border: 1px solid rgba(255,255,255,0.45);
-    background: rgba(15, 118, 110, 0.76);
-    color: white;
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    box-shadow: 0 8px 24px rgba(15, 118, 110, 0.18);
-}
-
-nav button:hover,
-nav button:focus-visible,
-nav button.active {
-    background: rgba(13, 148, 136, 0.92);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(13, 148, 136, 0.28);
-}
-
-.logo-button {
-    position: relative;
-    top: 0;
-    border: none;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(6px);
-    cursor: pointer;
-    padding: 8px 10px;
-    display: inline-block;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.logo-button:hover,
-.logo-button:focus-visible {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.24);
-}
-
-.logo-button img {
-    width: 110px;
-    border-radius: 14px;
-}
-
-.profile-pic {
-    width: min(200px, 40vw);
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 4px solid rgba(15, 118, 110, 0.7);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-}
-
-.company-logo-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 18px 0 28px;
-}
-
-.company-logo-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 110px;
-    min-height: 54px;
-    padding: 10px 14px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
-    color: #0f172a;
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(12px) scale(0.97);
-    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease, border-color 0.35s ease;
-}
-
-.company-logo-item.is-visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-.company-logo-item:hover,
-.company-logo-item:focus-visible {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 16px 26px rgba(15, 23, 42, 0.12);
-    border-color: rgba(15, 118, 110, 0.36);
-}
-
-.mobile-toggle {
-    display: none;
-    width: min(100%, 340px);
-    margin: 18px auto 0;
-    border: none;
-    border-radius: 14px;
-    background: rgba(15, 23, 42, 0.78);
-    color: white;
-    padding: 12px 16px;
-    cursor: pointer;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.mobile-toggle:hover,
-.mobile-toggle:focus-visible {
-    background: rgba(17, 24, 39, 0.95);
-    transform: translateY(-1px);
-}
-
-.hamburger-icon {
-    display: inline-block;
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: rgba(15, 23, 42, 0.96);
-    border-radius: 0 0 18px 18px;
-    padding: 12px 14px 14px;
-    margin: 0 auto;
-    list-style: none;
-    width: min(100%, 340px);
-    position: relative;
-    z-index: 10;
-    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.18);
-    overflow: hidden;
-}
-
-.mobile-menu li {
-    list-style: none;
-    margin: 0;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.mobile-menu li:last-child {
-    border-bottom: none;
-}
-
-.mobile-menu li a {
-    display: block;
-    padding: 14px 12px;
-    color: #f8fafc;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.2s ease, color 0.2s ease;
-    border-radius: 10px;
-}
-
-.mobile-menu li a:hover,
-.mobile-menu li a:focus-visible,
-.mobile-menu li a.active {
-    background: rgba(20, 184, 166, 0.18);
-    color: #ccfbf1;
-}
-
-.mobile-menu.show {
-    display: flex;
-    animation: slideDown 0.2s ease;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-:root {
-    --border-size: 5px;
-}
-
-.image-border {
-    border: var(--border-size) solid #343a40;
-    border-width: var(--border-size, 5px);
-    border-style: solid;
-    border-radius: 16px;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
-}
-
-.project-container {
-    margin-bottom: 20px;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.contact-social {
-    margin-top: 10px;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    border-radius: 18px;
-    background: #0a66c2;
-    color: #ffffff;
-    box-shadow: 0 16px 26px rgba(10, 102, 194, 0.22);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    animation: linkedinPulse 2s ease-in-out infinite;
-}
-
-.social-link:hover,
-.social-link:focus-visible {
-    transform: translateY(-2px) scale(1.08);
-    box-shadow: 0 18px 30px rgba(10, 102, 194, 0.32);
-    filter: brightness(1.06);
-}
-
-.social-link i {
-    font-size: 2.7rem;
-    line-height: 1;
-}
-
-@keyframes linkedinPulse {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(10, 102, 194, 0.24), 0 16px 26px rgba(10, 102, 194, 0.22);
-    }
-    50% {
-        box-shadow: 0 0 0 10px rgba(10, 102, 194, 0), 0 18px 30px rgba(10, 102, 194, 0.28);
-    }
-}
-
-#scrollUp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 52px;
-    height: 52px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: #fff;
-    border-radius: 50%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 9999;
-    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.32);
-}
-
-#scrollUp i {
-    pointer-events: none;
-}
-
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-@media (max-width: 768px) {
-    .hero {
-        min-height: 260px;
-        padding: 18px 15px 12px;
-        align-items: center;
-    }
-
-    .hero-top {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-copy {
-        align-items: center;
-        text-align: center;
-    }
-
-    .desktop-nav {
-        justify-content: center;
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .profile-pic {
-        width: 150px;
-    }
-
-    .company-logo-item {
-        min-width: 92px;
-        min-height: 48px;
-        font-size: 0.68rem;
-    }
-
-    .carousel-inner img {
-        height: 180px;
-    }
-
-    .content-section {
-        padding: 30px 0;
-    }
-
-    .social-link {
-        width: 64px;
-        height: 64px;
-    }
-
-    .social-link i {
-        font-size: 2.2rem;
-    }
-}
-
-@media (min-width: 769px) {
-    .mobile-toggle,
-    .mobile-menu {
-        display: none !important;
-    }
-
-    .desktop-nav {
-        display: flex;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-button img {
-        width: 96px;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KZFM - WEBPAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-top">
+            <button class="logo-button" type="button" aria-label="Open home section" data-section="home" onclick="showSection('home')">
+                <img src="02 LOGO/KZFM LOGO.jpg" alt="My Logo" width="150">
+            </button>
+
+            <div class="hero-copy">
+                <h1>KIM ZOILO FELIX G. MAGNAYE</h1>
+                <p>BIM Technologist | Structural BIM Modeler | Revit Specialist</p>
+
+                <nav class="desktop-nav" aria-label="Main navigation">
+                    <button type="button" data-section="about" onclick="showSection('about')">About Me</button>
+                    <button type="button" data-section="education" onclick="showSection('education')">Education</button>
+                    <button type="button" data-section="skills" onclick="showSection('skills')">Skills</button>
+                    <button type="button" data-section="experience" onclick="showSection('experience')">Work Experience</button>
+                    <button type="button" data-section="projects" onclick="showSection('projects')">Projects</button>
+                    <button type="button" data-section="contact" onclick="showSection('contact')">Contact</button>
+                </nav>
+            </div>
+        </div>
+
+        <button class="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-icon" aria-hidden="true">☰</span>
+        </button>
+
+        <ul class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+            <li><a href="#about" data-section="about" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#education" data-section="education" onclick="showSection('education')">Education</a></li>
+            <li><a href="#skills" data-section="skills" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#experience" data-section="experience" onclick="showSection('experience')">Work Experience</a></li>
+            <li><a href="#projects" data-section="projects" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#contact" data-section="contact" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="container section content-section" id="home" style="display: block;">
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Project Images/Project1.jpg" class="d-block w-100 image-border" alt="High-Rise Structural Modeling">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>High-Rise Structural Modeling</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Project Images/Project2.jpg" class="d-block w-100 image-border" alt="Piling Plans & Reinforcement Detailing">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Piling Plans & Reinforcement Detailing</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Project Images/Project3.jpg" class="d-block w-100 image-border" alt="MEPF Coordination in Large-Scale Buildings">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>MEPF Coordination in Large-Scale Buildings</h5>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="mt-3">
+            <input type="range" id="borderSlider" min="1" max="20" value="5">
+            <label for="borderSlider">Adjust Border Size:</label>
+        </div>
+    </section>
+
+    <section class="container section content-section" id="about" style="display: none;">
+        <h2>About Me</h2>
+        <img src="01 Profile Pic/Profile Pic.jpg" alt="Kim Zoilo Felix Magnaye" class="profile-pic">
+        <p>I am a skilled BIM Technologist with expertise in structural modeling, shop drawings, and 4D/5D simulations. Passionate about integrating digital solutions in construction.</p>
+    </section>
+
+    <section class="container section content-section" id="education" style="display: none;">
+        <h2>Education</h2>
+        <h3>Bachelor of Science in Civil Engineering</h3>
+        <p><strong>University of Batangas – Batangas City, Philippines</strong> (May 2006)</p>
+        <p>The Bachelor of Science in Civil Engineering (BSCE) program at the University of Batangas provides students with comprehensive knowledge and technical proficiency in planning, designing, and supervising civil engineering projects.</p>
+        <p>The curriculum emphasizes structural engineering, geotechnical engineering, water resources engineering, and project management.</p>
+
+        <h3>Building Information Modeling – Lifecycle Management</h3>
+        <p><strong>Algonquin College of Applied Arts and Technology – Ottawa, Ontario, Canada</strong> (Jan 2023 – Aug 2023)</p>
+        <p>The BIM-LM program equips students with specialized training for architecture, engineering, and construction using digital building models and collaborative project delivery workflows.</p>
+        <p>Students gain skills in BIM execution plans, interdisciplinary coordination, and efficient project delivery using modern digital tools.</p>
+
+        <h3>Building Automation System Operations</h3>
+        <p><strong>Algonquin College of Applied Arts and Technology – Ottawa, Ontario, Canada</strong> (Jan 2024 – Aug 2024)</p>
+        <p>This program focuses on building technologies, sustainability, and performance optimization, with emphasis on smart building operations and automation systems.</p>
+    </section>
+
+    <section class="container section content-section" id="skills" style="display: none;">
+        <h2>Skills</h2>
+        <ul>
+            <li>Revit (Structural Modeling & Shop Drawings)</li>
+            <li>BIM 360 Collaboration</li>
+            <li>Navisworks Coordination</li>
+            <li>4D & 5D BIM Visualization</li>
+            <li>Structural Detailing and Quantity Takeoff</li>
+            <li>Coordination, Drafting, and Project Documentation</li>
+        </ul>
+    </section>
+
+    <section class="container section content-section" id="experience" style="display: none;">
+        <h2>Work Experience</h2>
+
+        <div class="experience-item">
+            <h3>BIM Technologist / Structural BIM Modeler</h3>
+            <p class="experience-meta"><strong>Freelance / Contract Consultant</strong> | 2023 – Present</p>
+            <ul>
+                <li>Produced coordinated structural and architectural BIM models for building and infrastructure projects.</li>
+                <li>Prepared detailed Revit drawings, reinforcement layouts, and shop drawing packages for construction documentation.</li>
+                <li>Collaborated with design teams to review model clashes, improve constructability, and maintain project coordination.</li>
+                <li>Supported 4D and quantity-based project visualization and reporting using BIM workflows.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Structural Modeler / CAD Technician</h3>
+            <p class="experience-meta"><strong>Project-Based Roles</strong> | 2018 – 2023</p>
+            <ul>
+                <li>Built and revised structural framing, slabs, beams, columns, and reinforcement details in Revit and AutoCAD.</li>
+                <li>Created submission drawings, fabrication details, and technical sheets for consultants and contractors.</li>
+                <li>Ensured drawing accuracy, sheet coordination, and model consistency across project phases.</li>
+                <li>Worked closely with engineers to convert design intent into clean, buildable BIM documentation.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Junior Structural Engineer / Drafting Specialist</h3>
+            <p class="experience-meta"><strong>Construction and Design Support</strong> | 2010 – 2018</p>
+            <ul>
+                <li>Assisted in structural design checks, drawing preparation, and project quantity documentation.</li>
+                <li>Reviewed plans and specifications to support implementation and coordination on project sites.</li>
+                <li>Maintained organized documentation for design revisions, technical submittals, and site coordination.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container section content-section" id="projects" style="display: none;">
+        <h2>Projects</h2>
+        <div class="container mt-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="project-container">
+                        <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Project Images/Project1.jpg" class="d-block w-100 image-border" alt="Project 1 Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project2.jpg" class="d-block w-100 image-border" alt="Project 1 Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project3.jpg" class="d-block w-100 image-border" alt="Project 1 Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Project Images/Project4.jpg" class="d-block w-100 image-border" alt="Project 1 Image 4">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section content-section" id="contact" style="display: none;">
+        <h2>Contact</h2>
+        <p>Cell: +1 613 263 9677</p>
+        <p>Email: <a href="mailto:kimzfmagnaye@yahoo.com">kimzfmagnaye@yahoo.com</a></p>
+        <p class="contact-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kim-zoilo-felix-magnaye-4831aa66/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </p>
+    </section>
+
+    <div id="scrollUp"><i class="fa fa-chevron-up"></i></div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kim Zoilo Felix Magnaye | BIM Technologist</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

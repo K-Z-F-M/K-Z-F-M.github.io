@@ -1,67 +1,55 @@
 function showSection(sectionId) {
     const sections = document.querySelectorAll(".content-section");
     sections.forEach(function (section) {
-        section.style.display = "none";
-        section.hidden = true;
+        const isActive = section.id === sectionId;
+        section.style.display = isActive ? "block" : "none";
+        section.hidden = !isActive;
     });
 
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.style.display = "block";
-        section.hidden = false;
-    }
-
-    const navButtons = document.querySelectorAll(".desktop-nav button, .mobile-menu a");
-    navButtons.forEach(function (button) {
-        const action = button.getAttribute("onclick") || "";
-        const matches = action.includes("'" + sectionId + "'") || action.includes('"' + sectionId + '"');
-        button.classList.toggle("active", matches);
+    document.querySelectorAll("[data-section]").forEach(function (element) {
+        const isActive = element.dataset.section === sectionId;
+        element.classList.toggle("active", isActive);
     });
 
-    const menu = document.getElementById("mobileMenu");
-    if (menu) {
-        menu.classList.remove("show");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (mobileMenu) {
+        mobileMenu.classList.remove("show");
     }
 }
 
 window.showSection = showSection;
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navButtons = document.querySelectorAll(".desktop-nav button");
-    navButtons.forEach(function (button) {
-        const action = button.getAttribute("onclick");
-        if (!action) return;
+    const mobileToggle = document.querySelector(".mobile-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
 
-        const match = action.match(/showSection\(['"]([^'"]+)['"]\)/);
-        if (match && match[1]) {
-            button.addEventListener("click", function () {
-                showSection(match[1]);
-            });
-        }
-    });
-
-    const mobileLinks = document.querySelectorAll(".mobile-menu a");
-    mobileLinks.forEach(function (link) {
-        const href = link.getAttribute("href") || "";
-        const sectionMatch = href.match(/#(.*)$/);
-        if (!sectionMatch) return;
-
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = sectionMatch[1];
-            showSection(targetId);
-        });
-    });
-
-    const toggle = document.querySelector(".mobile-toggle");
-    const menu = document.querySelector(".mobile-menu");
-
-    if (toggle && menu) {
-        toggle.addEventListener("click", function () {
-            menu.classList.toggle("show");
-            toggle.setAttribute("aria-expanded", menu.classList.contains("show") ? "true" : "false");
+    if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener("click", function () {
+            const isOpen = mobileMenu.classList.toggle("show");
+            mobileToggle.setAttribute("aria-expanded", String(isOpen));
         });
     }
+
+    document.addEventListener("click", function (event) {
+        const navButton = event.target.closest("[data-section]");
+        if (navButton) {
+            const sectionId = navButton.dataset.section;
+            if (sectionId) {
+                event.preventDefault();
+                showSection(sectionId);
+            }
+        }
+
+        const mobileLink = event.target.closest(".mobile-menu a");
+        if (mobileLink) {
+            const href = mobileLink.getAttribute("href") || "";
+            const match = href.match(/^#(.+)$/);
+            if (match) {
+                event.preventDefault();
+                showSection(match[1]);
+            }
+        }
+    });
 
     const borderSlider = document.getElementById("borderSlider");
     if (borderSlider) {
@@ -75,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const updateScrollBtn = function () {
             scrollBtn.style.display = window.scrollY > 200 ? "flex" : "none";
         };
-
         updateScrollBtn();
         window.addEventListener("scroll", updateScrollBtn);
         scrollBtn.addEventListener("click", function () {

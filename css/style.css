@@ -43,7 +43,7 @@ label {
 
 .hero {
     position: relative;
-    background-image: linear-gradient(rgba(255,255,255,0.28), rgba(10,22,38,0.28)), url('Header Pic/00 LinkedIn Profile 1.jpg');
+    background-image: linear-gradient(rgba(255,255,255,0.28), rgba(10,22,38,0.28)), url('../Project Images/Project2-1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -473,4 +473,3 @@ nav button:focus-visible {
         display: flex;
     }
 }
-
